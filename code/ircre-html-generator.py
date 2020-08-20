@@ -46,8 +46,10 @@ def bibtexfilecopy():
 def bibtexclassify():
     parser = BibTexParser(common_strings=False)
     parser.ignore_nonstandard_types = False
+    currentdir = os.path.dirname(os.path.abspath(__file__))
+    ircre_bib_path = currentdir+r'/../bib7image/ircre.bib'
 
-    with open('../bib7image/ircre.bib', encoding='utf8') as bibtexfile:
+    with open(ircre_bib_path, encoding='utf8') as bibtexfile:
         ircrebib_database = bibtexparser.load(bibtexfile, parser)
 
     allentries = ircrebib_database.entries.copy()
@@ -65,7 +67,7 @@ def bibtexclassify():
     writer = BibTexWriter()
     writer.indent = '    '
     writer.order_entries_by = ('order',)
-    with open('../bib7image/articles.bib', 'w', encoding='utf8') as article_file:
+    with open(currentdir+r'/../bib7image/articles.bib', 'w', encoding='utf8') as article_file:
         bibtexparser.dump(article_database, article_file, writer=writer)
 
     otherentries= []
@@ -420,8 +422,8 @@ def filecopyback():
         '''cp /home/limingtao/ircre-bibtex/ircreupdate/newstatistics.js ''' + ircrestatwebsitefile + ''' -f ;''')
     return 0
 
-def generatehtml
-    pass
+def generatehtml():
+    return 0
 
 
 def main():
