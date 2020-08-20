@@ -1,7 +1,7 @@
 # ircre-bibtex
-scientific outputs from ircre in bibtex format
+ scientific outputs from ircre in bibtex format
 
-这是自动更新https://ircre.org/research.html 所用到的工具和实现。
+这 是自动更新https://ircre.org/research.html 所用到的工具和实现。
 
 我们使用python代码从bib生成research.html文件。
 
