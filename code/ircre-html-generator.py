@@ -428,7 +428,7 @@ def main():
     # openproxy()
 
     # 从网站目录复制bib文件
-    bibtexfilecopy()
+    # bibtexfilecopy()
 
     # 分类，分成article.bib, bookchapter.bib, ...
     bibtexclassify()
@@ -438,7 +438,7 @@ def main():
     # getclusterid()
 
     # 更新引用次数
-    getcitation()
+    # getcitation()
 
     # 按影响因子和引用次数对article排序，并取出top 15 most cited articles，
     articlessort()
@@ -448,11 +448,11 @@ def main():
     # 合并文件
     ircrebibmerge()
 
-    updatestatistics()
+    # updatestatistics()
 
     generatehtml()
 
-    filecopyback()
+    # filecopyback()
 
     return 0
 
