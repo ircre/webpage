@@ -17,21 +17,7 @@ web服务器系统会每天检查更新，调用code目录的生成工具，从i
 
 
 
-本自动更新脚本使用到的工具有bibcure (https://github.com/bibcure/bibcure)
-bibtexparser (https://github.com/sciunto-org/python-bibtexparser) bibtex-js(https://github.com/pcooksey/bibtex-js)
-scholar.py (https://github.com/ckreibich/scholar.py)。
 
-首先安装bibcure
-
-pip install bibcure
-
-我们可以使用doi2bib 获得bibtex的文献信息，
-添加到ircre.bib中去。
-
-然后根据这个到googlescholar上查询其clusterid，添加字段
-根据clusterid查询引用，增加字段。
-
-自动化的脚本根据ircre.bib定期去然后根据这个到googlescholar上查询引用次数的变化，进行排序。
 
 
 
