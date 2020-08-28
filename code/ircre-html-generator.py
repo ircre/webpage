@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+
 
 ###
 # 这是为了更新https://ircre.org/research.html文件而写的代码
@@ -270,7 +270,7 @@ def getstatistics():
         totalif = totalif + impactfactor
     hindex = Hindex(citationlist)
     i10index = I10index(citationlist)
-    totalcitations = totalcitations + 19
+    # totalcitations = totalcitations + 19
     citationperpaper = totalcitations / len(articleentries)
     citationperpaper = round(citationperpaper, 2)
     journalnumber = len(set(jourallist))
@@ -302,7 +302,7 @@ def getsothers():
         else:
             citednumber = 0
         totalcitations = totalcitations + citednumber
-    totalcitations = totalcitations + 19
+    # totalcitations = totalcitations + 19
     return (totalbooks, totalcitations, totalproceeds, totaleditors)
 
 
@@ -4068,17 +4068,6 @@ def generatehtml():
 
     <script src="./js/script.js"></script>
     <script src="./js/statistics.js"></script>
-    <script type="application/javascript">
-        document.getElementById("totalpublications").innerHTML = totalpublications;
-        document.getElementById("totalcitations").innerHTML = totalcitations;
-        document.getElementById("totalarticles").innerHTML = totalarticles;
-        document.getElementById("hindex").innerHTML = hindex;
-        document.getElementById("i10index").innerHTML = i10index;
-        document.getElementById("numberjournals").innerHTML = numberjournals;
-        document.getElementById("numberesihighlycited").innerHTML = numberesihighlycited;
-        document.getElementById("citationperpaper").innerHTML = citationperpaper;
-        document.getElementById("averageif").innerHTML = averageif;
-    </script>
     </body>
     </html>
 
@@ -4086,7 +4075,7 @@ def generatehtml():
     # 要解析的bib文件的路径
     top15ArticleHtml = generateTop15ArtitleHtml(top15_bib_path)
 
-    articleHtml = generateAricleHtml(articles_bib_path)
+    articleHtml = generateAricleHtml(sorted_articles_bib_path)
 
     bookHtml = generateBookHtml(others_bib_path)
 
