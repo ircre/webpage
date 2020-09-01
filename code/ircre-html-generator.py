@@ -78,7 +78,7 @@ def articlessort():
 
     for i in range(len(articles)):
         try:
-            articles[i]['sortkey1'] = float(articles[i]['impactfactor'])
+            articles[i]['sortkey1'] = float(articles[i]['impactfactor'][5:])
         except:
             articles[i]['sortkey1'] = float(0)
         try:
@@ -388,7 +388,7 @@ def generateTop15ArtitleHtml(bibFilePath):
             if 'cited' in allEntries[i].keys():
                 cited = '<br><span class="cited">&nbsp;&nbsp;Cited: %s</span>' % allEntries[i]['cited']
             if 'impactfactor' in allEntries[i].keys():
-                impactFactor = '<span class="infact">(<strong>IF 2018: %s</strong>)</span><br>' % allEntries[
+                impactFactor = '<span class="infact">(<strong>IF %s</strong>)</span><br>' % allEntries[
                     i]['impactfactor']
             if 'url' in allEntries[i].keys():
                 url = '''<a href="%s" target="_blank">%s</a>''' % (
@@ -508,7 +508,7 @@ def generateAricleHtml(bibFilePath):
             if 'cited' in allEntries[i].keys():
                 cited = '<br><span class="cited">&nbsp;&nbsp;Cited: %s</span>' % allEntries[i]['cited']
             if 'impactfactor' in allEntries[i].keys():
-                impactFactor = '<span class="infact">(<strong>IF 2018: %s</strong>)</span><br>' % allEntries[
+                impactFactor = '<span class="infact">(<strong>IF %s</strong>)</span><br>' % allEntries[
                     i]['impactfactor']
             if 'url' in allEntries[i].keys():
                 url = '''<a href="%s" target="_blank" style="float: left">%s</a>''' % (
@@ -608,7 +608,7 @@ def generateBookHtml(bibFilePath):
             if 'cited' in allEntries[i].keys():
                 cited = '<br><span class="cited">&nbsp;&nbsp;Cited: %s</span>' % allEntries[i]['cited']
             if 'impactfactor' in allEntries[i].keys():
-                impactFactor = '<span class="infact">(<strong>IF 2018: %s</strong>)</span><br>' % allEntries[
+                impactFactor = '<span class="infact">(<strong>IF %s</strong>)</span><br>' % allEntries[
                     i]['impactfactor']
             if 'url' in allEntries[i].keys():
                 url = '''<a href="%s" target="_blank" style="float: left">%s</a>''' % (
@@ -722,7 +722,7 @@ def generateProceedHtml(bibFilePath):
             if 'cited' in allEntries[i].keys():
                 cited = '<br><span class="cited">&nbsp;&nbsp;Cited: %s</span>' % allEntries[i]['cited']
             if 'impactfactor' in allEntries[i].keys():
-                impactFactor = '<span class="infact">(<strong>IF 2018: %s</strong>)</span><br>' % allEntries[
+                impactFactor = '<span class="infact">(<strong>IF %s</strong>)</span><br>' % allEntries[
                     i]['impactfactor']
             if 'url' in allEntries[i].keys():
                 url = '''<a href="%s" target="_blank" style="float: left">%s</a>''' % (
@@ -835,7 +835,7 @@ def generateEditorialsHtml(bibFilePath):
             if 'cited' in allEntries[i].keys():
                 cited = '<br><span class="cited">&nbsp;&nbsp;Cited: %s</span>' % allEntries[i]['cited']
             if 'impactfactor' in allEntries[i].keys():
-                impactFactor = '<span class="infact">(<strong>IF 2018: %s</strong>)</span><br>' % allEntries[
+                impactFactor = '<span class="infact">(<strong>IF %s</strong>)</span><br>' % allEntries[
                     i]['impactfactor']
             if 'url' in allEntries[i].keys():
                 url = '''<a href="%s" target="_blank" style="float: left">%s</a>''' % (
