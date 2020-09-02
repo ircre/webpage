@@ -78,7 +78,7 @@ def articlessort():
 
     for i in range(len(articles)):
         try:
-            articles[i]['sortkey1'] = float(articles[i]['impactfactor'])
+            articles[i]['sortkey1'] = float(articles[i]['impactfactor'][5:])
         except:
             articles[i]['sortkey1'] = float(0)
         try:
@@ -257,7 +257,7 @@ def getstatistics():
         else:
             citednumber = 0
         if 'impactfactor' in articleentries[i]:
-            impactfactor = float(articleentries[i]['impactfactor'])
+            impactfactor = float(articleentries[i]['impactfactor'][5:])
         else:
             impactfactor = 0.0
 

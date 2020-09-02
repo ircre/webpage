@@ -257,7 +257,7 @@ def getstatistics():
         else:
             citednumber = 0
         if 'impactfactor' in articleentries[i]:
-            impactfactor = float(articleentries[i]['impactfactor'])
+            impactfactor = float(articleentries[i]['impactfactor'][5:])
         else:
             impactfactor = 0.0
 
