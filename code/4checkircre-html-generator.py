@@ -78,7 +78,7 @@ def articlessort():
 
     for i in range(len(articles)):
         try:
-            articles[i]['sortkey1'] = float(articles[i]['impactfactor'][5:])
+            articles[i]['sortkey1'] = float(articles[i]['impactfactor'])
         except:
             articles[i]['sortkey1'] = float(0)
         try:
@@ -257,7 +257,7 @@ def getstatistics():
         else:
             citednumber = 0
         if 'impactfactor' in articleentries[i]:
-            impactfactor = float(articleentries[i]['impactfactor'][5:])
+            impactfactor = float(articleentries[i]['impactfactor'])
         else:
             impactfactor = 0.0
 
@@ -389,8 +389,10 @@ def generateTop15ArtitleHtml(bibFilePath):
             if 'cited' in allEntries[i].keys():
                 cited = '<br><span class="cited">&nbsp;&nbsp;Cited: %s</span>' % allEntries[i]['cited']
             if 'impactfactor' in allEntries[i].keys():
-                impactFactor = '<span class="infact">(<strong>IF 2018: %s</strong>)</span><br>' % allEntries[
-                    i]['impactfactor']
+                if 'impactfactoryear' not in allEntries[i].keys():
+                    impactFactor = '<span class="infact">(<strong>IF 2019: %s</strong>)</span><br>' % allEntries[i]['impactfactor']
+                else:
+                    impactFactor = '<span class="infact">(<strong>IF %s %s</strong>)</span><br>' % (allEntries[i]['impactfactoryear'],allEntries[i]['impactfactor'])
             if 'url' in allEntries[i].keys():
                 url = '''<a href="%s" target="_blank">%s</a>''' % (
                     allEntries[i]['url'], allEntries[i]['url'])
@@ -512,7 +514,10 @@ def generateAricleHtml(bibFilePath):
             if 'cited' in allEntries[i].keys():
                 cited = '<br><span class="cited">&nbsp;&nbsp;Cited: %s</span>' % allEntries[i]['cited']
             if 'impactfactor' in allEntries[i].keys():
-                impactFactor = '<span class="infact">(<strong>IF 2018: %s</strong>)</span><br>' % allEntries[i]['impactfactor']
+                if 'impactfactoryear' not in allEntries[i].keys():
+                    impactFactor = '<span class="infact">(<strong>IF 2019: %s</strong>)</span><br>' % allEntries[i]['impactfactor']
+                else:
+                    impactFactor = '<span class="infact">(<strong>IF %s %s</strong>)</span><br>' % (allEntries[i]['impactfactoryear'],allEntries[i]['impactfactor'])
             if 'url' in allEntries[i].keys():
                 url = '''<a href="%s" target="_blank" style="float: left">%s</a>''' % (allEntries[i]['url'], allEntries[i]['url'])
             if 'clusterid' in allEntries[i].keys():
@@ -613,7 +618,10 @@ def generateBookHtml(bibFilePath):
             if 'cited' in allEntries[i].keys():
                 cited = '<br><span class="cited">&nbsp;&nbsp;Cited: %s</span>' % allEntries[i]['cited']
             if 'impactfactor' in allEntries[i].keys():
-                impactFactor = '<span class="infact">(<strong>IF 2018: %s</strong>)</span><br>' % allEntries[i]['impactfactor']
+                if 'impactfactoryear' not in allEntries[i].keys():
+                    impactFactor = '<span class="infact">(<strong>IF 2019: %s</strong>)</span><br>' % allEntries[i]['impactfactor']
+                else:
+                    impactFactor = '<span class="infact">(<strong>IF %s %s</strong>)</span><br>' % (allEntries[i]['impactfactoryear'],allEntries[i]['impactfactor'])
             if 'url' in allEntries[i].keys():
                 url = '''<a href="%s" target="_blank" style="float: left">%s</a>''' % (allEntries[i]['url'], allEntries[i]['url'])
             if 'clusterid' in allEntries[i].keys():
@@ -728,7 +736,10 @@ def generateProceedHtml(bibFilePath):
             if 'cited' in allEntries[i].keys():
                 cited = '<br><span class="cited">&nbsp;&nbsp;Cited: %s</span>' % allEntries[i]['cited']
             if 'impactfactor' in allEntries[i].keys():
-                impactFactor = '<span class="infact">(<strong>IF 2018: %s</strong>)</span><br>' % allEntries[i]['impactfactor']
+                if 'impactfactoryear' not in allEntries[i].keys():
+                    impactFactor = '<span class="infact">(<strong>IF 2019: %s</strong>)</span><br>' % allEntries[i]['impactfactor']
+                else:
+                    impactFactor = '<span class="infact">(<strong>IF %s %s</strong>)</span><br>' % (allEntries[i]['impactfactoryear'],allEntries[i]['impactfactor'])
             if 'url' in allEntries[i].keys():
                 url = '''<a href="%s" target="_blank" style="float: left">%s</a>''' % (allEntries[i]['url'], allEntries[i]['url'])
             if 'clusterid' in allEntries[i].keys():
@@ -841,8 +852,10 @@ def generateEditorialsHtml(bibFilePath):
             if 'cited' in allEntries[i].keys():
                 cited = '<br><span class="cited">&nbsp;&nbsp;Cited: %s</span>' % allEntries[i]['cited']
             if 'impactfactor' in allEntries[i].keys():
-                impactFactor = '<span class="infact">(<strong>IF 2018: %s</strong>)</span><br>' % allEntries[
-                    i]['impactfactor']
+                if 'impactfactoryear' not in allEntries[i].keys():
+                    impactFactor = '<span class="infact">(<strong>IF 2019: %s</strong>)</span><br>' % allEntries[i]['impactfactor']
+                else:
+                    impactFactor = '<span class="infact">(<strong>IF %s %s</strong>)</span><br>' % (allEntries[i]['impactfactoryear'],allEntries[i]['impactfactor'])
             if 'url' in allEntries[i].keys():
                 url = '''<a href="%s" target="_blank" style="float: left">%s</a>''' % (
                     allEntries[i]['url'], allEntries[i]['url'])
