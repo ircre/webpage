@@ -1,5 +1,3 @@
-
-
 ###
 # 这是为了更新https://ircre.org/research.html文件而写的代码
 # 目的是从ircre.bib自动生成我们格式的research.html文件
