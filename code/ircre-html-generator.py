@@ -384,7 +384,10 @@ def generateTop15ArtitleHtml(bibFilePath):
             if 'pages' in allEntries[i].keys():
                 pages = ',' + allEntries[i]['pages']
             if 'cited' in allEntries[i].keys():
-                cited = '<br><span class="cited">&nbsp;&nbsp;Cited: %s</span>' % allEntries[i]['cited']
+                if allEntries[i]['cited'] != '0':
+                    cited = '<br><span class="cited">&nbsp;&nbsp;Cited: %s</span>' % allEntries[i]['cited']
+                else:
+                    cited = '<br><span class="cited" style="display:none">&nbsp;&nbsp;Cited: %s</span>' % allEntries[i]['cited']
             if 'impactfactor' in allEntries[i].keys():
                 if 'impactfactoryear' not in allEntries[i].keys():
                     impactFactor = '<span class="infact">(<strong>IF 2019: %s</strong>)</span><br>' % allEntries[i]['impactfactor']
@@ -506,7 +509,10 @@ def generateAricleHtml(bibFilePath):
             if 'pages' in allEntries[i].keys():
                 pages = ','+allEntries[i]['pages']
             if 'cited' in allEntries[i].keys():
-                cited = '<br><span class="cited">&nbsp;&nbsp;Cited: %s</span>' % allEntries[i]['cited']
+                if allEntries[i]['cited'] != '0':
+                    cited = '<br><span class="cited">&nbsp;&nbsp;Cited: %s</span>' % allEntries[i]['cited']
+                else:
+                    cited = '<br><span class="cited" style="display:none">&nbsp;&nbsp;Cited: %s</span>' % allEntries[i]['cited']
             if 'impactfactor' in allEntries[i].keys():
                 if 'impactfactoryear' not in allEntries[i].keys():
                     impactFactor = '<span class="infact">(<strong>IF 2019: %s</strong>)</span><br>' % allEntries[i]['impactfactor']
@@ -608,7 +614,10 @@ def generateBookHtml(bibFilePath):
             if 'pages' in allEntries[i].keys():
                 pages = ','+allEntries[i]['pages']
             if 'cited' in allEntries[i].keys():
-                cited = '<br><span class="cited">&nbsp;&nbsp;Cited: %s</span>' % allEntries[i]['cited']
+                if allEntries[i]['cited'] != '0':
+                    cited = '<br><span class="cited">&nbsp;&nbsp;Cited: %s</span>' % allEntries[i]['cited']
+                else:
+                    cited = '<br><span class="cited" style="display:none">&nbsp;&nbsp;Cited: %s</span>' % allEntries[i]['cited']
             if 'impactfactor' in allEntries[i].keys():
                 if 'impactfactoryear' not in allEntries[i].keys():
                     impactFactor = '<span class="infact">(<strong>IF 2019: %s</strong>)</span><br>' % allEntries[i]['impactfactor']
@@ -724,7 +733,10 @@ def generateProceedHtml(bibFilePath):
             if 'pages' in allEntries[i].keys():
                 pages = ','+allEntries[i]['pages']
             if 'cited' in allEntries[i].keys():
-                cited = '<br><span class="cited">&nbsp;&nbsp;Cited: %s</span>' % allEntries[i]['cited']
+                if allEntries[i]['cited'] != '0':
+                    cited = '<br><span class="cited">&nbsp;&nbsp;Cited: %s</span>' % allEntries[i]['cited']
+                else:
+                    cited = '<br><span class="cited" style="display:none>&nbsp;&nbsp;Cited: %s</span>' % allEntries[i]['cited']
             if 'impactfactor' in allEntries[i].keys():
                 if 'impactfactoryear' not in allEntries[i].keys():
                     impactFactor = '<span class="infact">(<strong>IF 2019: %s</strong>)</span><br>' % allEntries[i]['impactfactor']
@@ -839,7 +851,10 @@ def generateEditorialsHtml(bibFilePath):
             if 'pages' in allEntries[i].keys():
                 pages = ','+allEntries[i]['pages']
             if 'cited' in allEntries[i].keys():
-                cited = '<br><span class="cited">&nbsp;&nbsp;Cited: %s</span>' % allEntries[i]['cited']
+                if allEntries[i]['cited'] != '0':
+                    cited = '<br><span class="cited">&nbsp;&nbsp;Cited: %s</span>' % allEntries[i]['cited']
+                else:
+                    cited = '<br><span class="cited" style="display:none>&nbsp;&nbsp;Cited: %s</span>' % allEntries[i]['cited']
             if 'impactfactor' in allEntries[i].keys():
                 if 'impactfactoryear' not in allEntries[i].keys():
                     impactFactor = '<span class="infact">(<strong>IF 2019: %s</strong>)</span><br>' % allEntries[i]['impactfactor']
