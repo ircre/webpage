@@ -24,8 +24,8 @@ jobs:
       run: |
         python code/4checkircre-html-generator.py
         python code/ircre-html-generator.py
-        mv webpage/research.html webpage/researchOld.html
-        mv webpage/researchNew.html webpage/research.html
+        mv webpage/research.html webpage/researchold.html
+        mv webpage/researchnew.html webpage/research.html
     - name: Build and Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
