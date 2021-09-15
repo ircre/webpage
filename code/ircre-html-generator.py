@@ -22,7 +22,7 @@ others_bib_path = currentdir+r'/../bib7image/others.bib'
 sorted_articles_bib_path = currentdir+r'/../bib7image/sorted-articles.bib'
 top15_bib_path = currentdir+r'/../bib7image/top15.bib'
 newircre_bib_path = currentdir+r'/../bib7image/newircre.bib'
-researchnew_html_path = currentdir+r'/../www/researchnew.html'
+researchnew_html_path = currentdir+r'/../webpage/researchnew.html'
 
 
 def bibtexclassify():

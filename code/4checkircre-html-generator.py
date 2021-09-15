@@ -24,7 +24,7 @@ others_bib_path = currentdir+r'/../bib7image/others.bib'
 sorted_articles_bib_path = currentdir+r'/../bib7image/sorted-articles.bib'
 top15_bib_path = currentdir+r'/../bib7image/top15.bib'
 newircre_bib_path = currentdir+r'/../bib7image/newircre.bib'
-research4googlecheck_html_path = currentdir+r'/../www/research4googlecheck.html'
+research4googlecheck_html_path = currentdir+r'/../webpage/research4googlecheck.html'
 
 
 def bibtexclassify():
